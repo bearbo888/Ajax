@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{54F7FDB7-15A1-40CE-AC70-1501579A213D}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.prjAjax PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="prjAjax/Views/Home/Index.cshtml">
+    <Files>
+      <File FileName="prjAjax/Views/Home/Index.cshtml" Line="18" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="prjAjax" expanded="True">
+            <Node name="prjAjax" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

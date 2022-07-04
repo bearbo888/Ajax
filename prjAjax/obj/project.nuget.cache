@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bLxrR9ZEAmsSzGG/FkXDcEM8KmKYMOJLup36XZEpTMJgk4s/ecPyzrdXnI+u+G/IMNyqUQrkDyydpVb+k9Ak6w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hankshsu\\Desktop\\prjAjax\\prjAjax\\prjAjax.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hankshsu\\.nuget\\packages\\bootstrap\\5.1.3\\bootstrap.5.1.3.nupkg.sha512"
+  ],
+  "logs": []
+}
