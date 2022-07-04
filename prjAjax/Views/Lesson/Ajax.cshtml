@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewData["Title"] = "Ajax";
+}
+
+<h1>FirstAjax</h1>
+
+<input type="text" id="inputName" placeholder="Enter Name" class="form-text" />
+<input type="text" id="inputAge" placeholder="Enter Age" class="form-text" />
+<input type="button" class="btn btn-primary mb-3" id="buttonStart" value="Ajax Start" />
+
+<div id="div1" class="alert alert-secondary"></div>
+
+@section Scripts{
+    <script>
+
+        const btn = document.querySelector("#buttonStart"),
+            myDiv = document.querySelector("#div1"),
+            txtName = document.querySelector("#inputName"),
+            txtAge = document.querySelector("#inputAge"),
+            xhr = new XMLHttpRequest();
+
+        btn.addEventListener("click", () => {
+            xhr.abort();
+        });
+
+        btn.addEventListener("click", () => {
+            xhr.addEventListener("load", () => {
+                const data = xhr.response; //接收資料
+                myDiv.innerHTML = `${data}`;
+                console.log("load");
+            });
+
+            xhr.addEventListener("loadstart", () => {
+                btn.textContent = "Loading";
+                btn.setAttribute("disable", "disable");
+                console.log("loadstart");
+            });
+
+            xhr.addEventListener("loadend", () => {
+                btn.textContent = "Ajax Start";
+                btn.removeAttribute("disable");
+                console.log("loadend");
+            });
+
+            xhr.addEventListener("timeout", () => {
+                myDiv.innerHTML = "<h2>Server Timeout</h2>";
+                console.log("timeout");
+            });
+
+            xhr.addEventListener("abort", () => {
+                btn.innerHTML = "Abort";
+                console.log("timeout");
+            });
+
+            const url = "@Url.Content("~/Lesson/Index")";
+            const params = `?name=${txtName.value}&age=${txtAge.value}`;
+            //xhr.open("GET", "Index");//呼叫不同controller, parameter2: "/controller/action"
+            xhr.open("GET", url + params);
+            xhr.send();
+        });
+
+    </script>
+}

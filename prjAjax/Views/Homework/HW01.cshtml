@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "HW01";
+}
+
+<h1>HW01</h1>
+
+<div class="text-center">
+    <h1 class="display-4" id="a">HW01</h1>
+    <div id="div"> </div>
+</div>
+
+
+@section Scripts{
+    <script>
+        var emp = {
+            "employees": [
+                { "name": "Tom", "workYears": 3, "salary": 35000 },
+                { "name": "Jack", "workYears": 5, "salary": 40000 },
+                { "name": "Mary", "workYears": 7, "salary": 45000 }
+            ]
+        };
+
+        let table = document.createElement("table");
+        let thead = document.createElement('thead');
+        let tr = document.createElement("tr");
+
+        table.setAttribute("class", "table table-striped");
+
+        for (let key of emp.employees) {
+            tr = document.createElement("tr");
+            for (let prop in key) {
+                let td = document.createElement("td");
+                td.textContent = key[prop];
+                tr.append(td);
+            }
+            table.append(tr);
+        }
+
+        let headerTr = document.createElement('tr')
+
+        for (let header in emp.employees[0]) {
+            let th = document.createElement('th');
+            th.textContent = header;
+            headerTr.appendChild(th);
+        }
+
+        thead.append(headerTr);
+        table.append(thead);
+
+        document.getElementById("div").appendChild(table);
+        console.log(table)
+
+    </script>
+
+}
